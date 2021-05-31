@@ -1,0 +1,94 @@
+.search-form {
+    display: flex;
+    align-items: center;
+    margin: 0 1rem;
+
+    & input, select, button {
+        outline: none;
+        border:none;
+        height: 35px;
+    }
+
+    &__input {
+        position: relative;
+
+        & .fa {
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            margin: auto;
+            font-size: 20px;
+            color: white;
+            transform: translateY(-50%);
+        }
+    }
+
+    & input {
+        padding: 1rem;
+        background-color: transparent;
+        border: 1px solid white;
+        color: white;
+        padding-left: 40px;
+    }
+
+    & select {
+        padding: 0 1rem;
+    }
+
+    & button {
+        color: white;
+        &:not(:disabled) {
+            background-color: rgba(236, 77, 77, 0.808);
+            
+            &:hover {
+                background-color: rgba(0, 0, 0, 0.781);
+            }
+        }
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    &__toggle {
+        color: white;
+        margin: 0 1rem;
+
+        & .fa {
+            font-size: 2rem;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .search-form {
+        flex-direction: column;
+        width: 100%;
+        margin: 0;
+        
+        &__input {
+            width: 100%;
+
+            & .fa {
+                top: 40%;
+            }
+        }
+
+        & input, select, button {
+            width: 100%;
+            margin-bottom: 0.5rem;
+        }
+
+        &__toggle {
+            & i {
+                float: right;
+                margin-bottom: 1rem;
+            }
+        }
+
+    }
+}

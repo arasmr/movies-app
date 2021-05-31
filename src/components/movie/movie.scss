@@ -1,0 +1,88 @@
+.movie {
+    width: 100%;
+    border-bottom: 5px solid rgba(236, 77, 77, 0.808);
+    position: relative;
+
+    &__content {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+        padding: 2rem;
+    }
+
+    &__background {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+        opacity: 0.3;
+    }
+
+    &__info {
+        flex-grow: 1;
+        color: white;
+        padding-right: 2rem;
+    }
+
+    &__poster {
+        margin: auto;
+        box-shadow: 5px 5px 44px 10px rgba(0,0,0,0.82);
+        border-radius: 10px;
+    }
+
+    &__type {
+        padding: 0.5rem;
+        color: white;
+        background-color: rgba(0, 0, 0, 0.623);
+        text-transform: uppercase;
+        border-radius: 10px;
+        display: inline-block;
+    }
+
+    &__title {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+
+        & h2 {
+            font-size: 2rem;
+        }
+
+        & h3 {
+            margin-left: 1rem;
+            color: rgb(255, 255, 0);
+        }
+    }
+
+    &__cast, &__writer {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        
+        & span {
+            width: 10%;
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .movie {        
+        &__poster {
+            display: none;
+            width: 100%;
+        }
+
+        & input {
+            width: 100%;
+        }
+
+        & select {
+            width: 100%;
+        }
+    }
+}
