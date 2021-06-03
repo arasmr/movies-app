@@ -22,6 +22,7 @@ function Search() {
     const { title, plot } = useParams<ParamTypes>();
 
     useEffect(() => {
+        setError(false);
         let unmounted = false;
         let source = axios.CancelToken.source();
 
